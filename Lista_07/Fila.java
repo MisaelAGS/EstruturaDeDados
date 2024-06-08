@@ -48,13 +48,18 @@ public class Fila {
         if (this.tamanho == 0){
             return false;
         }
-        else if (this.primeiroElemento <= this.ultimoElemento) {
+        else if (this.tamanho == 1){
+            this.fila[primeiroElemento] = 0;
+            this.tamanho--;
+            return true;
+        }
+        else if (this.primeiroElemento < this.posicao_max) {
             this.fila[primeiroElemento] = 0;
             this.primeiroElemento ++;
             this.tamanho --;
             return true;
         }
-        else if (this.primeiroElemento <= this.posicao_max) {
+        else if (this.primeiroElemento == this.posicao_max) {
             this.fila[primeiroElemento] = 0;
             this.primeiroElemento = 0;
             this.tamanho--;
